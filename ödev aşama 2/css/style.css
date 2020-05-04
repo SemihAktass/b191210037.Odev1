@@ -1,0 +1,136 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+}
+.clear {
+	clear: both;
+}
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+/* HEADER */
+header {
+	background: #F0E9DC;
+	
+}
+header nav ul {
+	width: 500px;
+	margin: 0 auto;
+}
+header nav ul li {
+	float: left;
+	padding: 10px;
+}
+header nav ul li a {
+	color: #6F5F5C;
+}
+header nav ul li a:hover {
+	color: #1CD67C;
+}
+
+/* SLIDER */
+.slider {
+	width:100%;
+	height: 400px;
+	background: url('../img/hakkımda/wp.jpeg') no-repeat center 90%;
+	background-size: cover;
+	position: relative;
+}
+.content .box{
+	background: white;
+	width:100%;
+	border: 5px outset #F0E9DC;
+	box-sizing: border-box;
+	padding:5px;
+}
+.content .box .text{
+	font-size: 18px;
+	font-weight:bold;
+	color: #6F5F5C;
+}
+.content h1.title{
+	background: #F0E9DC;
+	padding: 10px;
+	font-size:36px;
+	color: #6F5F5C;
+}
+.content .container table{
+		
+		width: 100%;
+		border: 5px outset #F0E9DC;
+		display:table;
+		box-sizing: border-box;
+		font-size:18px;
+		margin-bottom:10px;
+		font-weight:bold;
+		color:#6F5F5C;
+}
+.content .container table tr{
+	display:table-row;
+	height:50px;
+}
+.content .container table td{
+	display:table-cell;
+	text-align:left;
+}
+
+
+/* FOOTER */
+footer {
+	background: #F0E9DC;
+	color: #6F5F5C;
+	text-align: center;
+	padding: 20px 0;
+	font-size: 18px;
+}
+
+/* MEDIA QUERY */
+@media all and (max-width: 1000px){
+	.content .box {
+		width: 100%
+	}
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	.container .table thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	..container .table tr { border: 1px solid #ccc; }
+	..container .table td { 
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%!important; 
+	}
+	.container .table td:before { 
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+        font-weight:bold;
+	}
+	.container .table td:before { content: attr(data-title);}
+}
+@media all and (max-width: 480px){
+	header nav ul {
+		float: right;
+		background: #6F5F5C;
+		width: 100%;
+	}
+	header nav ul li {
+		float: none;
+		text-align: center;
+	}
+	header nav ul li a {
+		color: #fff;
+	}
+	.content .box {
+		width: 100%;
+	}	
+}
